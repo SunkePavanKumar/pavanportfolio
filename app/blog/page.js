@@ -40,17 +40,16 @@ async function getBlogs() {
   }
 `
   try {
-    const variables = { host: "pavansunke.hashnode.dev" };
+    const variables = { host: process.env.NEXT_PUBLIC_HASH_NODE_HOST };
     const response = await fetch('https://gql.hashnode.com', {
       method: 'POST',
       headers: {
-        Authorization: `95a1bd59-ecaf-4437-acb2-9d1993ea1168`,
+        Authorization: process.env.NEXT_PUBLIC_HAST_AUTHORIZATION,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ query, variables}),
     });
     const data = await response.json();
-    console.log(data.data.publication.posts.edges)
     return data.data.publication.posts.edges;
   } catch (error) {
     console.log("Error :: ", error)
