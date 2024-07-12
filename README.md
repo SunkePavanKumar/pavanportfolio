@@ -8,7 +8,7 @@
 
 ![](./public/image/image.png)
 
-## View live preview [here](/).
+## View live preview [here](https://pavansunke.dev).
 
 ---
 
