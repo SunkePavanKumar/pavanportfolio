@@ -1,7 +1,3 @@
-<p align="center" width="100%">
-    <img height="100" src="https://github.com/said7388/developer-portfolio/assets/77630868/c0064908-cd5f-4751-a77c-eba90a62b55c">
-</p>
-
 # Developer Portfolio
 
 ### Are you struggling to create a professional portfolio website? Look no further! You can use the Developer Portfolio template and create your very own personalized portfolio today! My website is designed to be user-friendly and easily customizable, making it perfect for both developers and freelancers.
@@ -10,9 +6,9 @@
 
 # Demo :movie_camera:
 
-![](./public/image/screen.png)
+![](./public/image/image.png)
 
-## View live preview [here](https://abusaid.netlify.app/).
+## View live preview [here](/).
 
 ---
 
@@ -104,35 +100,29 @@ NEXT_PUBLIC_RECAPTCHA_SECRET_KEY = # For captcha verification on contact form
 NEXT_PUBLIC_RECAPTCHA_SITE_KEY =
 ```
 
-### Then, Customize data in the `utils/data` [folder](https://github.com/said7388/developer-portfolio/tree/main/utils/data).
+### Then, Customize data in the `utils/data`
 
 Eg:
 
 ```javascript
 export const personalData = {
-  name: "ABU SAID",
-  profile: "/profile.png",
-  designation: "Full-Stack Software Developer",
-  description: "My name is ABU SAID....",
-  email: "abusaid7388@gmail.com",
-  phone: "+8801608797655",
-  address: "Dhaka, Bangladesh",
-  github: "https://github.com/said7388",
-  facebook: "https://www.facebook.com/abusaid.riyaz/",
-  linkedIn: "https://www.linkedin.com/in/abu-said-bd/",
-  twitter: "https://twitter.com/said7388",
-  stackOverflow: "https://stackoverflow.com/users/16840768/abu-said",
-  leetcode: "https://leetcode.com/said3812/",
-  devUsername: "said7388",
-  resume: "...",
+  name: "Pavan Kumar Sunke",
+  profile: '/hero.jpg',
+  designation: "Software Developer",
+  description: "My name is Pavan Kumar Sunke. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.",
+  email: 'pavan.1413489@gmail.com',
+  phone: '+91-9347592994',
+  address: 'Hyderabad, Telangana',
+  github: 'https://github.com/SunkePavanKumar',
+  linkedIn: 'https://www.linkedin.com/in/pavansunke/',
+  twitter: 'https://twitter.com/PavanSunke',
+  leetcode: "https://leetcode.com/u/vtu13227/",
+  devUsername: "pavansunke",
+  resume: "https://drive.google.com/file/d/1zVZJTJ_x2eYjpkmPKWJosZx2Lu80UHnw/view?usp=sharing"
 };
 ```
 
-`devUsername` Used for fetching blog from `dev.to`.
 
----
-
----
 
 # Packages Used :package:
 

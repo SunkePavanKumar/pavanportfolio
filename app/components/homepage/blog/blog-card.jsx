@@ -12,7 +12,7 @@ function BlogCard({ blog }) {
     >
       <div className="h-44 lg:h-52 w-auto cursor-pointer overflow-hidden rounded-t-lg">
         <Image
-          src={blog?.cover_image}
+          src={blog?.coverImage?.url}
           height={1080}
           width={1920}
           alt=""
@@ -21,16 +21,16 @@ function BlogCard({ blog }) {
       </div>
       <div className="p-2 sm:p-3 flex flex-col">
         <div className="flex justify-between items-center text-[#16f2b3] text-sm">
-          <p>{timeConverter(blog.published_at)}</p>
+          <p>{timeConverter(blog.publishedAt)}</p>
           <div className="flex items-center gap-3">
             <p className="flex items-center gap-1">
               <BsHeartFill />
-              <span>{blog.public_reactions_count}</span>
+              <span>{blog.views}</span>
             </p>
-            {blog.comments_count > 0 &&
+            {blog.views > 0 &&
               <p className="flex items-center gap-1">
                 <FaCommentAlt />
-                <span>{blog.comments_count}</span>
+                <span>{blog.views}</span>
               </p>
             }
           </div>
@@ -41,10 +41,10 @@ function BlogCard({ blog }) {
           </p>
         </Link>
         <p className='mb-2 text-sm text-[#16f2b3]'>
-          {`${blog.reading_time_minutes} Min Read`}
+          {`${blog.readTimeInMinutes} Min Read`}
         </p>
         <p className='text-sm lg:text-base text-[#d3d8e8] pb-3 lg:pb-6 line-clamp-3'>
-          {blog.description}
+          {blog.brief}
         </p>
         {/* <div className="">
           <Link target='_blank' href={blog.url}>

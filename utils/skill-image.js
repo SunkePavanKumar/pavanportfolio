@@ -72,6 +72,10 @@ import vuetifyjs from '/public/svg/skills/vuetifyjs.svg';
 import webix from '/public/svg/skills/webix.svg';
 import wolframalpha from '/public/svg/skills/wolframalpha.svg';
 import wordpress from '/public/svg/skills/wordpress.svg';
+import express from "/public/svg/skills/expressjs-ar21.svg";
+import node from "/public/svg/skills/nodejs-logo-svgrepo-com.svg";
+import rabbitmq from "/public/svg/skills/rabbitmq-logo-svgrepo-com.svg";
+import redis from "/public/svg/skills/redis-logo-svgrepo-com.svg"
 
 
 export const skillsImage = (skill) => {
@@ -225,6 +229,16 @@ export const skillsImage = (skill) => {
       return wolframalpha;
     case 'canva':
       return canva;
+    
+    case 'express js':
+      return express;
+
+    case "node js":
+      return node;
+    case "redis":
+      return redis;
+    case "rabbitmq":
+      return rabbitmq;
     default:
       break;
   }
