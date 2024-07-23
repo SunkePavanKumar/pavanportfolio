@@ -1,15 +1,33 @@
 // @flow strict
-
+"use client"
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
 
+
 function HeroSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handlePreview = () => {
+    setIsModalOpen(true);
+  };
+
+    // Function to handle the download of the resume
+    const handleDownload = () => {
+      const link = document.createElement("a");
+      link.href = personalData.resume;
+      link.download = "Resume.pdf"; // Change the file name if needed
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+
+
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
       <Image
@@ -70,11 +88,11 @@ function HeroSection() {
               </button>
             </Link>
 
-            <Link className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold" role="button" target="_blank" href={personalData.resume}
-            >
+            <button className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
+             onClick={handlePreview}>
               <span>Get Resume</span>
               <MdDownload size={16} />
-            </Link>
+            </button>
           </div>
 
         </div>
@@ -173,6 +191,35 @@ function HeroSection() {
           </div>
         </div>
       </div>
+
+
+           {/* Modal for previewing resume */}
+      
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4 overflow-y-auto">
+          <div className="relative bg-gray-800 p-4 rounded-lg max-w-md w-full md:max-w-3xl h-full max-h-screen">
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-2 right-2 text-gray-400 hover:text-gray-200"
+            >
+              &times;
+            </button>
+            <iframe
+              src={personalData.resume}
+              className="w-full h-full border-none"
+              title="Resume Preview"
+            />
+            <div className="flex justify-end mt-4">
+              <button
+                onClick={handleDownload}
+                className="bg-gradient-to-r from-pink-500 to-violet-600 text-white py-2 px-4 rounded-full"
+              >
+                Download Resume
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
