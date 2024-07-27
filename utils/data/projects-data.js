@@ -13,7 +13,18 @@ export const projectsData = [
         code: '',
         demo: '',
         image: 'FlavorFlow'
+    },
+    {
+        id: 2,
+        name: 'FullStack Twitter Clone',
+        description: 'Designed and launched a Twitter-like social media platform using cutting-edge technologies. The application features real-time updates with GraphQL and Redis caching, secure user authentication with Google OAuth, and efficient database interactions using Prisma ORM with PostgreSQL. The platform enhances user engagement through a responsive and scalable architecture.',
+        tools: ['Node.js', 'Express.js', 'GraphQL', 'Prisma ORM', 'PostgreSQL', 'Supabase', 'Redis', 'Google OAuth', 'JSON Web Tokens', 'Next.js', 'Tailwind CSS', 'React Query', 'GraphQL Request', 'TypeScript', 'AWS'],
+        role: 'Full Stack Developer',
+        code: '',
+        demo: '',
+        image: 'FullStackTwitterClone'
     }
+    
 ];
 
 
