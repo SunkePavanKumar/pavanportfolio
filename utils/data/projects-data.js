@@ -11,7 +11,7 @@ export const projectsData = [
         tools: ['Node.js', 'Express.js', 'MongoDB', 'React', 'Redux', 'Stripe', 'OAuth', 'bcrypt', 'passport.js', 'JSON Web Tokens', 'JavaScript', 'Tailwind CSS', 'Modular CSS', 'Vercel', 'Render'],
         role: 'Full Stack Developer',
         code: '',
-        demo: '',
+        demo: 'https://ecommerce-lovat-three.vercel.app/',
         image: 'FlavorFlow'
     },
     {
